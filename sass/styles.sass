@@ -1,0 +1,64 @@
+body
+  background: white
+  margin: 0
+
+.swiper-container
+  z-index: 0
+  width: 100%
+  height: 100%
+  padding: 0
+
+  .swiper-slide
+    max-height: 1000px
+    overflow: hidden
+    text-align: center
+
+    & img
+      width: 100%
+      height: 100%
+
+  .slider-button-next,
+  .slider-button-prev
+    width: 70px
+    height: 70px
+    position: absolute
+    top: 50%
+    z-index: 10
+    cursor: pointer
+
+    &:hover
+      & svg
+        & path:first-child
+          fill: black
+
+        & path:nth-child(2)
+          stroke: white
+
+        & path:last-child
+          stroke: white
+
+    & svg
+      width: 100%
+      height: 100%
+
+
+  .slider-button-next
+    right: 10px
+    left: auto
+
+  .slider-button-prev
+    left: 10px
+    right: auto
+
+  .swiper-pagination-bullet-active
+    background: black
+
+  .swiper-pagination
+    position: absolute
+
+@media screen and (max-width: 640px)
+  .swiper-container
+    .slider-button-next,
+    .slider-button-prev
+      width: 40px
+      height: 40px

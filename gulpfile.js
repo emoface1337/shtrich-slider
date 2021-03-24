@@ -2,7 +2,7 @@
 
 // const autoprefixer = require("gulp-autoprefixer")
 const gulp = require("gulp")
-// const rename = require("gulp-rename")
+const rename = require("gulp-rename")
 const sass = require('gulp-sass')
 const browserSync = require('browser-sync')
 // const cssnano = require('cssnano')
@@ -11,7 +11,7 @@ const browserSync = require('browser-sync')
 
 const paths = {
     html: ['index.html'],
-    sass: ['./sass/**/*.sass', './sass/**/*.sass'],
+    sass: ['./sass/**/*.sass', './sass/*.sass'],
     js: ['./scripts/**/*.js']
 }
 
@@ -26,8 +26,8 @@ const css = () => {
         //     content: ['index.html']
         // }))
         // .pipe(postcss([cssnano()]))
-        // .pipe(rename("style.min.css"))
-        // .pipe(gulp.dest("./css/"))
+        .pipe(rename("style.min.css"))
+        .pipe(gulp.dest("./css/"))
         .pipe(browserSync.stream())
 }
 
