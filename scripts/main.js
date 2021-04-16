@@ -9,27 +9,69 @@ const swiper = new Swiper('.swiper-container', {
         nextEl: '.slider-button-next',
         prevEl: '.slider-button-prev'
     },
-    pagination: {
-        clickable: true,
-        el: '.swiper-pagination'
-    },
     breakpoints: {
         // <=
         320: {
             slidesPerView: 2,
-            spaceBetween: 20
+            spaceBetween: 0
         },
         640: {
             slidesPerView: 3,
-            spaceBetween: 40
+            spaceBetween: 0
         },
         768: {
             slidesPerView: 3,
-            spaceBetween: 40
+            spaceBetween: 0
         },
         1024: {
-            slidesPerView: 5,
-            spaceBetween: 50
+            slidesPerView: 3,
+            spaceBetween: 0
         }
     }
 })
+
+// $('.center').slick({
+//     centerMode: true,
+//     slidesToShow: 2,
+//     slidesToScroll: 1,
+//     infinite: true,
+//     // centerPadding: '300px',
+//     responsive: [
+//         {
+//             breakpoint: 1650,
+//             settings: {
+//                 slidesToShow: 2,
+//                 slidesToScroll: 1,
+//                 infinite: true,
+//                 // centerPadding: '200px'
+//             }
+//         },
+//         {
+//             breakpoint: 1024,
+//             settings: {
+//                 slidesToShow: 2,
+//                 slidesToScroll: 1,
+//                 infinite: true,
+//                 centerPadding: '150px'
+//             }
+//         },
+//         {
+//             breakpoint: 800,
+//             settings: {
+//                 slidesToShow: 2,
+//                 slidesToScroll: 1,
+//                 infinite: true,
+//                 centerMode: false,
+//             }
+//         },
+//         {
+//             breakpoint: 480,
+//             settings: {
+//                 slidesToShow: 1,
+//                 slidesToScroll: 1,
+//                 centerMode: true,
+//                 centerPadding: '100px'
+//             }
+//         }
+//     ]
+// })
